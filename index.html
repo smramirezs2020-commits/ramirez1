@@ -7,10 +7,12 @@
     <link rel="stylesheet" type="text/css" href="transicionimg.css" />
     <title>♡</title>
   </head>
-  <body>
-    <a href="#"><h1>Para ti mi bonita ♡</h1></a>
+  <body onmousemove="PlayAudio()">
+    <a href="#" onclick="PlayAudio()"><h1>Para ti mi bonita ♡</h1></a>
+   
 
     <div class="box" id="blur">
+
       <span style="--i: 5"><img loading="lazy" src="img/cine.jpg" /></span>
       <span style="--i: 6"><img loading="lazy" src="img/flores.jpg" /></span>
       <span style="--i: 1"><img loading="lazy" src="img/abrazo.jpg" /></span>
@@ -19,28 +21,13 @@
       <span style="--i: 8"><img loading="lazy" src="img/brazos.jpg" /></span>
       <span style="--i: 3"><img loading="lazy" src="img/piernas.jpg" /></span>
       <span style="--i: 4"><img loading="lazy" src="img/corazoncito.jpg" /></span>
+
     </div>
-
-    <!-- Tu audio -->
-    <audio id="audio" autoplay loop muted>
-      <source src="musica/DameTuMano.mp3" type="audio/mp3" />
+    <audio id="audio" autoplay loop>
+      <source
+        src="musica/DameTuMano.mp3"
+        type="audio/mp3"
+      />
     </audio>
-
-    <!-- Script para desbloquear el sonido -->
-    <script>
-      const audio = document.getElementById("audio");
-
-      function PlayAudio() {
-        audio.muted = false;
-        audio.play();
-        // Quitamos el listener después de la primera interacción
-        document.removeEventListener("click", PlayAudio);
-        document.removeEventListener("mousemove", PlayAudio);
-      }
-
-      // El navegador pedirá interacción, usamos clic o movimiento
-      document.addEventListener("click", PlayAudio);
-      document.addEventListener("mousemove", PlayAudio);
-    </script>
   </body>
 </html>
