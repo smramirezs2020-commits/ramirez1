@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="png" href="img/icono.png" />
+    <link rel="stylesheet" type="text/css" href="transicionimg.css" />
+    <title>♡</title>
+  </head>
+  <body onmousemove="PlayAudio()">
+    <a href="#" onclick="PlayAudio()"><h1>Para ti mi bonita ♡</h1></a>
+   
+
+    <div class="box" id="blur">
+
+      <span style="--i: 5"><img loading="lazy" src="img/cine.jpg" /></span>
+      <span style="--i: 6"><img loading="lazy" src="img/flores.jpg" /></span>
+      <span style="--i: 1"><img loading="lazy" src="img/abrazo.jpg" /></span>
+      <span style="--i: 2"><img loading="lazy" src="img/manos.jpg" /></span>
+      <span style="--i: 7"><img loading="lazy" src="img/playa.jpg" /></span>
+      <span style="--i: 8"><img loading="lazy" src="img/brazos.jpg" /></span>
+      <span style="--i: 3"><img loading="lazy" src="img/piernas.jpg" /></span>
+      <span style="--i: 4"><img loading="lazy" src="img/corazoncito.jpg" /></span>
+
+    </div>
+    <audio id="audio" autoplay loop>
+      <source
+        src="musica/Pascal - Dame Tu Mano.mp3"
+        type="audio/mp3"
+      />
+    </audio>
+
+    <script type="text/javascript">
+      function toggle() {
+        var blur = document.getElementById("blur");
+        blur.classList.toggle("active");
+
+        var popup = document.getElementById("popup");
+        popup.classList.toggle("active");
+      }
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
